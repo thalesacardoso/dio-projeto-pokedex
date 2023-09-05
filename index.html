@@ -1,0 +1,32 @@
+Requisição http
+
+URL: https://pokeapi.co/api/v2/pokemon/
+   ${endereço} /${path = caminho de identificação do recurso}
+
+Request Method: GET | POST | PUT | DELETE
+   GET -> Pega dados da URL
+   POST -> Envia dados para o banco de dados
+   PUT -> Atualiza os dados do banco de dados
+   DELETE -> Deleta dados do banco de dados
+
+Query string:
+   Chave = valor
+   URL: https://pokeapi.co/api/v2/pokemon/?type=grass&name=Planta
+   offset = 20
+   limit = 20
+
+Os headers são uma espécie de configuração de uma Requisição
+
+Request headers -> configuração do que se pede
+   content-type: application/json 
+
+Response headers -> configuração do que se recebe como resposta
+
+Request body:
+{
+   "name":"teste"
+}
+
+status code: 200 ok
+
+processamento assincrono -> quando ocorre o precessamento mas não gera um resultado na mesma hora.
