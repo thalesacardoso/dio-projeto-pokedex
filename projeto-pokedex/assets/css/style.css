@@ -4,7 +4,7 @@ GITHUB: https://github.com/thalesacardoso
 DATA: 
 */
 
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
 
 * {
     margin: 0;
@@ -14,8 +14,8 @@ DATA:
     text-decoration: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
-    list-style: none; 
-    color: #23272A; 
+    list-style: none;
+    color: #23272A;
 }
 
 html {
@@ -51,23 +51,28 @@ button {
     cursor: pointer;
 }
 
-.content {
-    padding: 1rem;
-    max-width: 400px;
-    margin: 0 auto;
-}
+
 
 /*****************************************
             ESTILO DO MAIN
 ******************************************/
 
-main .pokemons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.8rem;
+section.content {
+    background: white;
+    width: 100%;
+    max-width: 350px;
+    padding: 2rem 1rem;
+    margin: 0 auto;
 }
 
-main .pokemons .pokemon {
+main .pokemons {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin: 1.5rem 0;
+}
+
+.pokemon {
     padding: 1rem;
     border-radius: 1rem;
     background-color: #49D0B0;
@@ -76,39 +81,95 @@ main .pokemons .pokemon {
     gap: 5px;
 }
 
-main .pokemons .pokemon .numero {
-    font-size: 0.75rem;
+.pokemon .numero {
+    font-size: 0.8rem;
     text-align: right;
     color: #000;
     opacity: .3;
 }
 
-main .pokemons .pokemon .titulo {
-   color: white;
+.pokemon .titulo {
+    font-size: 1.2rem;
+    color: white;
 }
 
-main .pokemons .pokemon .box {
+.pokemon .box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 0.3rem;
 }
 
-main .pokemons .pokemon ul {
+.pokemon ul {
     color: #FFF;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
 }
 
-main .pokemons .pokemon ul.pokemon-textos li.tipo {
+.pokemon ul.pokemon-textos li.tipo {
     background-color: #61E1CA;
     border-radius: 0.5rem;
     text-align: center;
     font-size: 0.75rem;
     padding: .2rem 0.3rem;
-    margin: 0.2rem 0;
     color: #FFF;
 }
 
-main .pokemons .pokemon img {
+.pokemon img {
     max-width: 70px;
 }
 
+
+/*******************************
+    VERSÃO P/ TABLET
+*******************************/
+@media screen and (min-width:420px) and (max-width: 780px) {
+    section.content {
+        max-width: 600px;
+    }
+
+    main .pokemons {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.8rem;
+    }
+
+    .pokemon .titulo {
+        font-size: 1.2rem;
+    }
+
+    .pokemon ul {
+        flex-direction: row;
+    }
+
+    .pokemon img {
+        max-width: 80px;
+    }
+}
+
+
+/*******************************
+    VERSÃO P/ DESKTOP
+*******************************/
+@media screen and (min-width:781px) {
+    section.content {
+        max-width: 1000px;
+    }
+
+    main .pokemons {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0.8rem;
+    }
+
+    .pokemon .titulo {
+        font-size: 1.5rem;
+    }
+
+    .pokemon ul {
+        flex-direction: row;
+    }
+
+    .pokemon img {
+        max-width: 100px;
+    }
+}
