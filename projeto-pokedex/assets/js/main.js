@@ -5,14 +5,14 @@ let cards = document.getElementById('cards-pokemons')
 function convertePokemonEmHTML(pokemon) {
    return `
       <div class="pokemon">
-         <span class="numero">#001</span>
-         <span class="titulo">${pokemon.name}</span>
+         <span class="numero">#${pokemon[0]}</span>
+         <span class="titulo">${pokemon[1]}</span>
          <div class="box">
             <ul class="pokemon-textos">
-               <li class="tipo">Grass</li>
-               <li class="tipo">Poison</li>
+               <li class="tipo">${pokemon[3]}</li>
+               <li class="tipo">${pokemon[4]}</li>
             </ul>
-            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg" alt="${pokemon.name} ">
+            <img src="${pokemon[2]}" alt="${pokemon[1]} ">
          </div>
       </div>`
 }
