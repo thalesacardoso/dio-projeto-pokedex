@@ -1,5 +1,7 @@
 // Pega o conteúdo html com o ID cards-pokemons e armazena na variável cards
 let cards = document.getElementById('cards-pokemons')
+let btnPaginacao = document.getElementById('btnPaginacao')
+
 
 // Função para criar dinamicamente os cards dos pokemons através da API
 function convertePokemonEmHTML(pokemon) {
@@ -16,3 +18,18 @@ function convertePokemonEmHTML(pokemon) {
          </div>
       </div>`
 }
+
+
+// Chamada da função da API
+fetchPokemon(1,15);
+
+
+// Chama a função de paginação
+function aumentarPokemons() {
+   fetchPokemon(16,30);
+}
+
+
+btnPaginacao.addEventListener("click", () => {
+   aumentarPokemons();
+} )
