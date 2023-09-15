@@ -91,6 +91,7 @@ main .pokemons {
 .pokemon .titulo {
     font-size: 1.2rem;
     color: white;
+    text-transform: capitalize;
 }
 
 .pokemon .box {
@@ -108,16 +109,113 @@ main .pokemons {
 }
 
 .pokemon ul.pokemon-textos li.tipo {
-    background-color: #61E1CA;
+    /* background-color: #61E1CA; */
     border-radius: 0.5rem;
     text-align: center;
     font-size: 0.75rem;
     padding: .2rem 0.3rem;
     color: #FFF;
+    filter: brightness(1.1);
 }
 
 .pokemon img {
     max-width: 70px;
+}
+
+.paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0;
+}
+
+.paginacao #btnPaginacao {
+    background-color: #6C79DB ;
+    padding: .5rem 1.5rem;
+    border-radius: 20px;
+    font-size: .825rem;
+    text-align: center;
+    color: white;
+    transition: background-color 0.5s;
+}
+
+.paginacao #btnPaginacao:hover {
+    background-color: #394de8 ;
+}
+
+
+/************ CORES DO BACKGROUND POKEMON *******************/
+
+.normal {
+    background-color: #a6a877;
+}
+
+.grass {
+    background-color: #77c850;
+}
+
+.fire {
+    background-color: #ee7f30;
+}
+
+.water {
+    background-color: #678fee;
+}
+
+.electric {
+    background-color: #f7cf2e;
+}
+
+.ice {
+    background-color: #98d5d7;
+}
+
+.ground {
+    background-color: #dfbf69;
+}
+
+.flying {
+    background-color: #a98ff0;
+}
+
+.poison {
+    background-color: #a040a0;
+}
+
+.fighting {
+    background-color: #bf3029;
+}
+
+.psychic {
+    background-color: #f65687;
+}
+
+.dark {
+    background-color: #725847;
+}
+
+.rock {
+    background-color: #b8a137;
+}
+
+.bug {
+    background-color: #a8b720;
+}
+
+.ghost {
+    background-color: #6e5896;
+}
+
+.steel {
+    background-color: #b9b7cf;
+}
+
+.dragon {
+    background-color: #6f38f6;
+}
+
+.fairy {
+    background-color: #f9aec7;
 }
 
 

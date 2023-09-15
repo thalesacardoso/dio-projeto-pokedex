@@ -1,10 +1,13 @@
+// Variáveis
+const inicioPokemons = 0;
+const totalPokemons = 50;
+const pokemon = []
+let urlPokemon = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`
+const pokemonPromisses = []
 
 // Faz a requisição da API
 const fetchPokemon = async function () {
-   let urlPokemon = (id) => `https://pokeapi.co/api/v2/pokemon/${id}`
-   let pokemonPromisses = []
-   let totalPokemons = 10
-
+      
    // Faz varias requisições na API mudando o número final da URL de forma dinâmica
    for (let i = 1; i <= totalPokemons; i++) {
       pokemonPromisses.push(fetch(urlPokemon(i)).then((response) => response.json()))
@@ -17,12 +20,10 @@ const fetchPokemon = async function () {
       )
 }
 
-
+// Essa função vai receber uma lista de dados e vai separar cada dado para um indice do pokemon
 function pokemonDetalhes(pokemonLista) {
 
-   for (let i = 1; i < pokemonLista.length; i++) {
-      pokemon = []
-
+   for (let i = inicioPokemons; i < pokemonLista.length; i++) {
       pokemon[0] = pokemonLista[i].id // armazena o ID
       pokemon[1] = pokemonLista[i].name  // armazena o Nome
       pokemon[2] = pokemonLista[i].sprites.other.dream_world.front_default;  // armazena a Imagem
@@ -38,7 +39,7 @@ function pokemonDetalhes(pokemonLista) {
       // Chama a função responsável por criar o HTML dos pokemons e passa os objetos como parâmetro
       cards.innerHTML += convertePokemonEmHTML(pokemon)
    }
-
+   
 }
 
 // Chamada da função da API
