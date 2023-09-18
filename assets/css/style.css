@@ -24,7 +24,7 @@ html {
 }
 
 body {
-    background-color: white;
+    background-color: #e9e9e9;
 }
 
 h1 {
@@ -61,8 +61,11 @@ section.content {
     background: white;
     width: 100%;
     max-width: 350px;
+    height: auto;
     padding: 2rem 1rem;
-    margin: 0 auto;
+    margin: 20px auto;
+    border: 2px solid #f1f1f1;
+    border-radius: 20px;
 }
 
 main .pokemons {
@@ -99,6 +102,7 @@ main .pokemons {
     align-items: center;
     justify-content: space-between;
     gap: 0.3rem;
+    height: 100%;
 }
 
 .pokemon ul {
@@ -119,7 +123,8 @@ main .pokemons {
 }
 
 .pokemon img {
-    max-width: 70px;
+    max-width: 90px;
+    max-height: 90px;
 }
 
 .paginacao {
@@ -130,7 +135,7 @@ main .pokemons {
 }
 
 .paginacao #btnPaginacao {
-    background-color: #6C79DB ;
+    background-color: #6C79DB;
     padding: .5rem 1.5rem;
     border-radius: 20px;
     font-size: .825rem;
@@ -140,7 +145,7 @@ main .pokemons {
 }
 
 .paginacao #btnPaginacao:hover {
-    background-color: #394de8 ;
+    background-color: #394de8;
 }
 
 
@@ -268,6 +273,7 @@ main .pokemons {
     }
 
     .pokemon img {
-        max-width: 100px;
+        max-width: 90px;
+        max-height: 90px;
     }
 }
