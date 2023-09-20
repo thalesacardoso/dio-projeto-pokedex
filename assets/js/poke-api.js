@@ -1,32 +1,30 @@
 // Variáveis
-let offset = 0
-let limit = 5
+let offset = 0;
+let limit = 10;
+let limiteMaximo = 50;
 
-
+// Função principal responsável por fazer a chamada da API
 async function fetchPokemonLista() {
 
-   let url = `https://pokeapi.co/api/v2/pokemon/?offset=${offset}&limit=${limit}`
+   if (limit <= limiteMaximo) {
 
-   await fetch(url)
-      .then((response) => response.json())
-      .then((jsonBody) => jsonBody.results)
-      .then((pokemonLista) => fetchPokemonListaDetalhes(pokemonLista))
+      // O loop é responsável por gerar os números da ID final da requisição
+      for (let i = offset + 1; i <= limit; i++) {
 
-}
+         await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+            .then(response => response.json())
+            .then(dados => {
+               cards.innerHTML += convertePokemonEmHTML(dados)
+            })
+
+      }
+
+   } else {
+      offset += 0
+      limit += 0
+   }
 
 
-async function fetchPokemonListaDetalhes(pokeapi) {
-
-   // A função map gera um Loop automático de acordo com a quantidade de itens dentro dele
-   pokeapi.map((values) => {
-
-      fetch(values.url)
-         .then(response => response.json())
-         .then(jsonBody => {
-            cards.innerHTML += convertePokemonEmHTML(jsonBody)
-         })
-
-   })
 
 }
 

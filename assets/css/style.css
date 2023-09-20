@@ -86,9 +86,10 @@ main .pokemons {
 
 .pokemon .numero {
     font-size: 0.8rem;
+    font-weight: 300;
     text-align: right;
-    color: #000;
-    opacity: .3;
+    color: #fff;
+    opacity: .7;
 }
 
 .pokemon .titulo {
@@ -135,10 +136,12 @@ main .pokemons {
 }
 
 .paginacao #btnPaginacao {
+    width: 300px;
+    height: 40px;
     background-color: #6C79DB;
     padding: .5rem 1.5rem;
     border-radius: 20px;
-    font-size: .825rem;
+    font-size: 1.2rem;
     text-align: center;
     color: white;
     transition: background-color 0.5s;
