@@ -1,6 +1,6 @@
 // Variáveis
 let offset = 0;
-let limit = 10;
+let limit = 5;
 let limiteMaximo = 50;
 
 // Função principal responsável por fazer a chamada da API
@@ -23,9 +23,6 @@ async function fetchPokemonLista() {
       offset += 0
       limit += 0
    }
-
-
-
 }
 
 // Chama a função principal da request dos pokemons

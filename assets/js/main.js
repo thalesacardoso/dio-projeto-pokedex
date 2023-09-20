@@ -42,8 +42,8 @@ function convertePokemonEmHTML(pokemon) {
 // Cria a função de colocar mais pokemons na página.
 btnPaginacao.addEventListener("click", () => {
    // configura a quantidade de pokemons
-   offset += 10
-   limit += 10
+   offset += 5
+   limit += 5
 
    // fetchPokemonLista(offset, limit);
    fetchPokemonLista();
