@@ -5,6 +5,7 @@ DATA:
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 
 * {
     margin: 0;
@@ -76,9 +77,10 @@ main .pokemons {
 }
 
 .pokemon {
+    background-color: #49D0B0;
+    min-height: 180px;
     padding: 1rem;
     border-radius: 1rem;
-    background-color: #49D0B0;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -181,12 +183,18 @@ main .pokemons {
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
-
 }
 
 #modal .content .topo span {
     color: white;
     font-size: 1rem;
+}
+
+#modal .content .topo span a i {
+    color: white;
+    font-size: 32px;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 #modal .content .topo span.titulo {
@@ -237,6 +245,10 @@ main .pokemons {
     font-size: 1rem;
 }
 
+#modal .informacoes .info_abas button.ativo {
+    color: red;
+}
+
 #modal .informacoes .info_abas button:hover {
     background-color: #ddd;
 }
@@ -249,11 +261,20 @@ main .pokemons {
     gap: 1rem
 }
 
+#info_pokemon .ativo {
+    display: flex;
+}
+
+#info_pokemon .oculto {
+    display: none;
+}
+
+
 /******************* LISTA PERFIL *************************/
 .lista_perfil {
     width: 80%;
     padding: 10px 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0.5rem;
 }
@@ -284,7 +305,7 @@ main .pokemons {
 .lista_status {
     width: 80%;
     padding: 10px 0;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 1rem;
 }
