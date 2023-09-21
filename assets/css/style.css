@@ -200,6 +200,7 @@ main .pokemons {
 #modal .content .topo span.titulo {
     font-size: 2rem;
     font-weight: 400;
+    text-transform: capitalize;
 }
 
 #modal .content .imagem {

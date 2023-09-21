@@ -36,7 +36,7 @@ function convertePokemonEmHTML(pokemon) {
 
    // retorna o HTML com os dados da API incluso
    return `
-      <a href="#" onclick="mostrarModal()">
+      <a href="#" onclick="mostrarModal(${poke.id})">
          <div class="pokemon ${poke.tipo1}">
             <span class="numero"> ${poke.id} </span>
             <span class="titulo"> ${poke.nome} </span>
@@ -51,13 +51,19 @@ function convertePokemonEmHTML(pokemon) {
       </a>`
 }
 
-function mostrarModal() {
+function mostrarModal(id) {
+  
+   modalPokemon(id)
+
    if(modal.style.display == 'none'){
       modal.style.display = 'block'
    } else {
       modal.style.display = 'none'
    }
+
+
 }
+
 
 // Cria a função de colocar mais pokemons na página.
 btnPaginacao.addEventListener("click", () => {
