@@ -114,7 +114,6 @@ main .pokemons {
 }
 
 .pokemon ul.pokemon-textos li.tipo {
-    /* background-color: #61E1CA; */
     border-radius: 0.5rem;
     text-align: center;
     font-size: 0.75rem;
@@ -153,7 +152,7 @@ main .pokemons {
 
 /************ MODAL POKEMON *******************/
 #modal {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     width: 100%;
     height: 100%;
 
@@ -161,16 +160,15 @@ main .pokemons {
     top: 0;
     left: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 5;    
+    z-index: 5;
+    overflow-y: auto;
 }
 
 #modal .content {
     width: 100%;
     max-width: 600px;
-    height: 100%;
+    margin: 10px auto;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -181,65 +179,83 @@ main .pokemons {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    flex-wrap: wrap;
+    gap: 10px;
+
 }
 
 #modal .content .topo span {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
-main #modal .content .imagem {
+#modal .content .topo span.titulo {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#modal .content .imagem {
     width: 100%;
-    height: 170px;
-    position: relative;
+    height: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 #modal .imagem img {
+    width: 200px;
+    height: 200px;
     position: absolute;
-    max-width: 200px;
-    max-height: 200px;
-    display: block;
+    top: 30px;
 }
 
 #modal .informacoes {
     background-color: white;
-    padding: 3.5rem 1rem 50rem;
-    border-radius: 20px 20px 0 0;
+    padding: 3.5rem 1rem 3.5rem;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+}
+
+#modal .informacoes p {
     text-align: center;
 }
 
 #modal .informacoes .info_abas {
-    background-color: yellow;
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
 #modal .informacoes .info_abas button {
-    font-size: 1.2rem;
+    background-color: white;
     padding: 0.5rem 2rem;
+    border-radius: 10px;
+    border-bottom: 3px solid #ddd;
+    font-size: 1rem;
+}
+
+#modal .informacoes .info_abas button:hover {
+    background-color: #ddd;
 }
 
 #info_pokemon {
-    /* background-color: #394de8; */
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem
 }
 
 /******************* LISTA PERFIL *************************/
 .lista_perfil {
+    width: 80%;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    display: none;
 }
 
 .lista_perfil div {
@@ -266,52 +282,47 @@ main #modal .content .imagem {
 /******************* LISTA STATUS *************************/
 
 .lista_status {
-    /* background-color: red; */
+    width: 80%;
     padding: 10px 0;
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
 }
 
-.lista_status div {
-    /* background-color: red; */
+.lista_status div.status {
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
     gap: 5px;
 }
 
-.lista_status div h4,
-.lista_status div span {
-    padding: 0.3rem 0.8rem;
+.lista_status div.status h4,
+.lista_status div.status span {
+    padding: 0.1rem 0.8rem;
     font-size: 1rem;
     text-align: left;
 }
 
-.lista_status div h4 {
-    width: 120px;
+.lista_status div.status h4 {
+    min-width: 120px;
     color: #888;
 }
 
-.lista_status div span {
-    width: 60px;
+.lista_status div.status span {
+    min-width: 60px;
     color: #555;
     font-weight: bold;
-    /* display: none; */
+    display: none;
 }
 
-.lista_status .barra {
+.lista_status div.status .barra {
     background-color: #eee;
     width: 100%;
-    max-width: 300px;
     height: 10px;
     border-radius: 20px;
-    display: flex;
 }
 
-.progress-bar {
-    width: 20%;
+.lista_status div.status .progress-bar {
+    width: 50%;
     height: 100%;
     border-radius: 20px;
 }
@@ -415,6 +426,30 @@ main #modal .content .imagem {
     .pokemon img {
         max-width: 80px;
     }
+
+    /************ MODAL POKEMON *******************/
+
+    #modal .content .topo span.titulo {
+        font-size: 2.5rem;
+    }
+
+    .lista_perfil,
+    .lista_status {
+        width: 90%;
+    }
+
+    .lista_status div.status {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .lista_status div.status span {
+        display: block;
+    }
+
+    .lista_status div.status .barra {
+        width: 100%
+    }
 }
 
 
@@ -442,5 +477,29 @@ main #modal .content .imagem {
     .pokemon img {
         max-width: 90px;
         max-height: 90px;
+    }
+
+    /************ MODAL POKEMON *******************/
+
+    #modal .content .topo span.titulo {
+        font-size: 2.5rem;
+    }
+
+    .lista_perfil,
+    .lista_status {
+        width: 90%;
+    }
+
+    .lista_status div.status {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .lista_status div.status span {
+        display: block;
+    }
+
+    .lista_status div.status .barra {
+        width: 100%
     }
 }
