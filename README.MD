@@ -6,7 +6,7 @@
 
 <h2>Conheça o projeto clicando na imagem abaixo:</h2>
 
-<a href="https://thalesacardoso.github.io/trilha-javascript-mod2/">
+<a href="https://thalesacardoso.github.io/dio-projeto-pokedex/">
   <img src="assets/img/img2.png">
 </a>
 
